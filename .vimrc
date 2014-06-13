@@ -104,10 +104,11 @@ if has('vim_starting')
 endif
 " originalrepos on github
 NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/vimproc'
+"NeoBundle 'Shougo/vimproc'
 " NeoBundle 'VimClojure'
 " NeoBundle 'Shougo/vimshell'
-" NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/neocomplcache'
 " NeoBundle 'Shougo/neocomplcache-snippets-complete'
 " NeoBundle 'jpalardy/vim-slime'
@@ -116,12 +117,44 @@ NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'taku-o/vim-toggle'
 NeoBundle 'tpope/vim-fugitive'
+" NeoBundle 'tomtom/tcomment_vim'
 
 filetype plugin indent on     " required!
 filetype indent on
 "syntax on
 
 colorscheme desert
+
+let vimproc_updcmd = has('win64') ?
+      \ 'tools\\update-dll-mingw 64' : 'tools\\update-dll-mingw 32'
+execute "NeoBundle 'Shougo/vimproc.vim'," . string({
+      \ 'build' : {
+      \     'windows' : vimproc_updcmd,
+      \     'cygwin' : 'make -f make_cygwin.mak',
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \    },
+      \ })
+
+" unite
+let g:unit_enable_start_insert=1
+noremap <C-P> :Unite buffer<CR>
+noremap <C-N> :Unite -buffer-name=file file<CR>
+noremap <C-Z> :Unite file_mru<CR>
+
+" windowsを分割して開く
+au FileType unite nnoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
+au FileType unite inoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
+au FileType unite nnoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
+au FileType unite inoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
+" ESCを2回押すと終了
+au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
+au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
+" 初期設定関数
+au FileType unite call s:unite_my_settings()
+  function! s:unite_my_settings()
+  " Overwrite settings.
+endfunction
 
 " neocomplcache
 set completeopt=menuone
