@@ -1,3 +1,6 @@
+" install neobundle before starting
+" https://github.com/Shougo/neobundle.vim#1-install-neobundle
+
 "新しい行のインデントを現在行と同じにする
 set autoindent
 "バックアップファイルを作るディレクトリ
