@@ -10,7 +10,7 @@ ln -sf ${DIR}/.vimrc ~/.vimrc
 
 # install neobundle.vim
 curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
-mkdir -p ~/.vim/bundle
-git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+# mkdir -p ~/.vim/bundle
+# git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 
 # do NeoBundleInstall on vim
