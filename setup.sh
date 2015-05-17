@@ -7,6 +7,7 @@ mkdir ~/.vimbackup
 
 # make symbolic link of .vimrc
 ln -sf ${DIR}/.vimrc ~/.vimrc
+ln -sf ${DIR}/.ctags ~/.ctags
 
 # install neobundle.vim
 curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
