@@ -130,9 +130,7 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tomtom/tcomment_vim'
-
 NeoBundle 'nathanaelkane/vim-indent-guides'
-
 NeoBundle 'taku-o/vim-toggle'
 NeoBundle 'scrooloose/nerdtree'
 
@@ -143,7 +141,7 @@ filetype plugin indent on
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
-NeoBundleCheck
+"NeoBundleCheck
 " <-- neobundle
 
 set background=dark
