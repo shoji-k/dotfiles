@@ -133,6 +133,7 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'taku-o/vim-toggle'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'thinca/vim-ref'
 
 call neobundle#end()
 
@@ -193,4 +194,7 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=gray ctermbg=0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=236
+
+" vim-ref
+let g:ref_phpmanual_path = $HOME . '/.vim/doc/php-chunked-xhtml'
 

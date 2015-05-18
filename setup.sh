@@ -6,8 +6,14 @@ DIR=`pwd`
 mkdir ~/.vimbackup
 
 # make symbolic link of .vimrc
-ln -sf ${DIR}/.vimrc ~/.vimrc
-ln -sf ${DIR}/.ctags ~/.ctags
+n -sf ${DIR}/.vimrc ~/.vimrc
+n -sf ${DIR}/.ctags ~/.ctags
+
+mkdir ~/.vim/doc/
+wget http://jp1.php.net/get/php_manual_ja.tar.gz/from/this/mirror
+tar xvzf mirror
+rm mirror
+mv ./php-chunked-xhtml ~/.vim/doc
 
 # install neobundle.vim
 curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
