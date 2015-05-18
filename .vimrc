@@ -197,4 +197,5 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=236
 
 " vim-ref
 let g:ref_phpmanual_path = $HOME . '/.vim/doc/php-chunked-xhtml'
+let g:ref_refe_cmd = $HOME . '/.bitclust'
 

@@ -15,6 +15,10 @@ tar xvzf mirror
 rm mirror
 mv ./php-chunked-xhtml ~/.vim/doc
 
+# install refe
+gem install refe
+bitclust setup --vesions=2.2.2
+
 # install neobundle.vim
 curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 # mkdir -p ~/.vim/bundle
