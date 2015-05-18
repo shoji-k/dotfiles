@@ -134,6 +134,7 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'taku-o/vim-toggle'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'thinca/vim-ref'
+NeoBundle 'taka84u9/vim-ref-ri'
 
 call neobundle#end()
 
