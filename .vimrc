@@ -136,6 +136,9 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'taka84u9/vim-ref-ri'
 
+NeoBundle 'mfumi/ref-dicts-en'
+NeoBundle 'tyru/vim-altercmd'
+
 call neobundle#end()
 
 " Required:
@@ -199,4 +202,31 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=236
 " vim-ref
 let g:ref_phpmanual_path = $HOME . '/.vim/doc/php-chunked-xhtml'
 let g:ref_refe_cmd = $HOME . '/.bitclust'
+
+" ref dict en
+let g:ref_source_webdict_sites = {
+\   'je': {
+\     'url': 'http://dictionary.infoseek.ne.jp/jeword/%s',
+\   },
+\   'ej': {
+\     'url': 'http://dictionary.infoseek.ne.jp/ejword/%s',
+\   },
+\ }
+
+" デフォルトサイト
+let g:ref_source_webdict_sites.default = 'ej'
+
+" 出力に対するフィルタ
+" 最初の数行を削除
+function! g:ref_source_webdict_sites.je.filter(output)
+  return join(split(a:output, "\n")[15 :], "\n")
+endfunction
+
+function! g:ref_source_webdict_sites.ej.filter(output)
+  return join(split(a:output, "\n")[15 :], "\n")
+endfunction
+
+call altercmd#load()
+CAlterCommand ej Ref webdict ej
+CAlterCommand je Ref webdict je
 
