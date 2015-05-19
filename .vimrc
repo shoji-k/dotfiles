@@ -48,6 +48,7 @@ set statusline+=%{fugitive#statusline()}\ %<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&
 set laststatus=2
 "highlight
 set hls
+syntax enable
 
 "windowsのvimfilesを.vimに変更する
 if has('win32')
