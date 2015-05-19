@@ -9,7 +9,7 @@ mkdir ~/.vimbackup
 n -sf ${DIR}/.vimrc ~/.vimrc
 n -sf ${DIR}/.ctags ~/.ctags
 
-mkdir ~/.vim/doc/
+mkdir -p ~/.vim/doc/
 wget http://jp1.php.net/get/php_manual_ja.tar.gz/from/this/mirror
 tar xvzf mirror
 rm mirror
