@@ -11,8 +11,8 @@ n -sf ${DIR}/.ctags ~/.ctags
 
 mkdir -p ~/.vim/doc/
 wget http://jp1.php.net/get/php_manual_ja.tar.gz/from/this/mirror
-tar xvzf mirror
-rm mirror
+tar xvzf php_manual_ja.tar.gz
+rm -f php_manual_ja.tar.gz
 mv ./php-chunked-xhtml ~/.vim/doc
 
 # install refe
