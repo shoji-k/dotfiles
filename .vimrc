@@ -6,8 +6,8 @@ set backupdir=$HOME/.vimbackup
 set directory=$HOME/.vimbackup
 "ファイル保存ダイアログの初期ディレクトリをバッファファイル位置に設定
 set browsedir=buffer
-"クリップボードをWindowsと連携
-set clipboard=unnamed
+"クリップボードを連携
+set clipboard=unnamedplus
 "Vi互換をオフ
 "set nocompatible
 "タブの代わりに空白文字を挿入する
@@ -147,12 +147,17 @@ filetype plugin indent on
 "NeoBundleCheck
 " <-- neobundle
 
+syntax enable
 set background=dark
-colorscheme desert
-try
-  colorscheme solarized
-catch
-endtry
+colorscheme solarized
+let g:solarized_termcolors=256
+
+" set background=light
+" colorscheme desert
+" try
+"   colorscheme solarized
+" catch
+" endtry
 
 if (exists('+colorcolumn'))
   set colorcolumn=80
@@ -227,4 +232,5 @@ endfunction
 call altercmd#load()
 CAlterCommand ej Ref webdict ej
 CAlterCommand je Ref webdict je
+
 
