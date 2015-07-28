@@ -49,6 +49,8 @@ set laststatus=2
 "highlight
 set hls
 syntax enable
+" change current directory auto
+set autochdir
 
 "windowsのvimfilesを.vimに変更する
 if has('win32')
@@ -58,6 +60,7 @@ endif
 
 "encodings
 set encoding=utf-8
+set fileencodings=utf-8,cp932
 set fileformats=unix,dos,mac
 
 " 全角スペースの表示
@@ -136,6 +139,9 @@ NeoBundle 'taka84u9/vim-ref-ri'
 
 NeoBundle 'mfumi/ref-dicts-en'
 NeoBundle 'tyru/vim-altercmd'
+
+NeoBundle 'eshion/vim-sync'
+NeoBundle 'tpope/vim-surround'
 
 call neobundle#end()
 
@@ -233,4 +239,6 @@ call altercmd#load()
 CAlterCommand ej Ref webdict ej
 CAlterCommand je Ref webdict je
 
+" vim-sync
+nnoremap <C-I> <ESC>:call SyncUploadFile()<CR>
 
