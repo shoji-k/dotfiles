@@ -1,3 +1,10 @@
+" stop default plugin
+let g:loaded_gzip              = 1
+let g:loaded_tar               = 1
+let g:loaded_tarPlugin         = 1
+let g:loaded_zip               = 1
+let g:loaded_zipPlugin         = 1
+
 "新しい行のインデントを現在行と同じにする
 set autoindent
 "バックアップファイルを作るディレクトリ
@@ -240,5 +247,5 @@ CAlterCommand ej Ref webdict ej
 CAlterCommand je Ref webdict je
 
 " vim-sync
-nnoremap <C-I> <ESC>:call SyncUploadFile()<CR>
+" nnoremap <C-I> <ESC>:call SyncUploadFile()<CR>
 
