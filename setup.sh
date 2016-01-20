@@ -25,3 +25,7 @@ curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.s
 # git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 
 # do NeoBundleInstall on vim
+
+# git hook
+git config --global init.templatedir '~/.git_template'
+cp -r .git_template ~/.git_template
