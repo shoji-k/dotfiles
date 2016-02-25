@@ -1,0 +1,23 @@
+[user]
+  email = shoji.kobayashi.0125@gmail.com
+  username = kobayashi shoji
+  name = kobayashi shoji
+[color]
+  ui = auto
+[alias]
+  alias = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
+  ch = checkout
+  co = commit
+  st = status
+  br = branch
+  sts = status -s
+  l = log --graph --branches --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(green)- %an, %cr%Creset'
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+[core]
+  quotepath = off
+[push]
+  default = simple
+[diff]
+  tool = meld
+[init]
+  templatedir = ~/.git_template
