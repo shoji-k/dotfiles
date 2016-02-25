@@ -142,6 +142,7 @@ alias gc='git commit -m'
 alias gb='git branch -a'
 alias gd='git diff'
 alias gs='git status'
+alias gss='git status -s'
 alias gl='git log --graph --oneline --decorate --all'
 
 # alias
