@@ -146,5 +146,8 @@ alias gss='git status -s'
 alias gl='git log --graph --oneline --decorate --all'
 
 # alias
+alias vu='vagrant up'
+alias vr='vagrant reload'
+alias vh='vagrant halt'
 alias goh='sudo shutdown -h now'
 
