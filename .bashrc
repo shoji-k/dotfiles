@@ -126,7 +126,11 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 #export PS1="\[\033[01;32m\]\u@\h\[\033[00m]:\[\033[01;36m\]\W\[\033[00m\]\$(parse_git_branch)\$ "
 # export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
-export PS1='\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
+color=34m
+if [ -n "$SSH_CLIENT" ]; then
+  color=32m
+fi
+export PS1='\[\033[${color}\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
 
 stty stop undef
 
@@ -149,5 +153,6 @@ alias gl='git log --graph --oneline --decorate --all'
 alias vu='vagrant up'
 alias vr='vagrant reload'
 alias vh='vagrant halt'
+alias vs='vagrant ssh'
 alias goh='sudo shutdown -h now'
 
