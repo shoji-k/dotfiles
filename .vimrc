@@ -90,12 +90,6 @@ inoremap "" ""<Left>
 inoremap '' ''<Left>
 inoremap <> <><Left>
 
-" 分割画面移動
-nmap sj <C-W>j
-nmap sk <C-W>k
-nmap sh <C-w>h
-nmap sl <C-w>l
-
 "連続コピペ
 vnoremap <silent> <C-p> "0p<CR>
 
