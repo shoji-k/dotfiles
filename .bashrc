@@ -113,7 +113,6 @@ if ! shopt -oq posix; then
   fi
 fi
 [ -r /home/user/.byobu/prompt ] && . /home/user/.byobu/prompt   #byobu-prompt#
-
 _byobu_sourced=1 . /usr/bin/byobu-launch
 
 export PATH="$HOME/.rbenv/bin:$PATH"
