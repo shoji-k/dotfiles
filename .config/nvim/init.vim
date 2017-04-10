@@ -84,3 +84,5 @@ au BufNewFile,BufRead *.twig set filetype=html
 "履歴を絞り込んだ状態で遡る
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
+
+colorscheme desert
