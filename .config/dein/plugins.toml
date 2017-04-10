@@ -21,3 +21,7 @@ on_ft = 'toml'
 [[plugins]] # git
 repo = 'tpope/vim-fugitive'
 
+[[plugins]] # filer
+repo = 'scrooloose/nerdtree'
+
+
