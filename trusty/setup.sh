@@ -6,8 +6,8 @@ DIR=`pwd`
 mkdir ~/.vimbackup
 
 # make symbolic link of .vimrc
-n -sf ${DIR}/.vimrc ~/.vimrc
-n -sf ${DIR}/.ctags ~/.ctags
+ln -sf ${DIR}/.vimrc ~/.vimrc
+ln -sf ${DIR}/.ctags ~/.ctags
 
 mkdir -p ~/.vim/doc/
 wget http://jp1.php.net/get/php_manual_ja.tar.gz/from/this/mirror

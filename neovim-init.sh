@@ -14,4 +14,4 @@ ln -s ${DIR}/.config/dein/neovim.toml ~/.config/dein/neovim.toml
 # :UpdateRemotePlugins
 
 # add .bashrc, neovim needs this
-export TERM=xterm-color
+#export TERM=xterm-color
