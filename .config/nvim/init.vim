@@ -75,10 +75,11 @@ set smartindent
 set smarttab
 "タブを打った時のスペースの数
 set shiftwidth=2
-set softtabstop=2
 set tabstop=2
+set softtabstop=2
 "set php indent
-au BufNewFile,BufRead *.php set tabstop=4 shiftwidth=4
+au BufNewFile,BufRead *.php set tabstop=4 shiftwidth=4 softtabstop=4
+"set php indent
 "set twig filetype
 au BufNewFile,BufRead *.twig set filetype=html
 
@@ -89,3 +90,4 @@ cnoremap <C-n> <Down>
 colorscheme desert
 
 set statusline+=%{fugitive#statusline()}\ %<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+set clipboard+=unnamedplus
