@@ -77,11 +77,11 @@ set smarttab
 set shiftwidth=2
 set tabstop=2
 set softtabstop=2
-set shiftwidth=2
 "set php indent
-"au BufNewFile,BufRead *.php set expandtab tabstop=4 shiftwidth=4
+au BufNewFile,BufRead *.php set tabstop=4 shiftwidth=4 softtabstop=4
+"set php indent
 "set twig filetype
-"au BufNewFile,BufRead *.twig set filetype=html
+au BufNewFile,BufRead *.twig set filetype=html
 
 "履歴を絞り込んだ状態で遡る
 cnoremap <C-p> <Up>
