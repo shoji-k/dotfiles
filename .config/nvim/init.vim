@@ -67,8 +67,6 @@ set nowrapscan
 "インクリメンタルサーチ
 set incsearch
 
-"タブの代わりに空白文字を挿入する
-set expandtab
 "新しい行を作ったときに高度な自動インデントを行う
 set smartindent
 "行頭の余白内で Tab を打ち込むと、'shiftwidth' の数だけインデントする。
@@ -82,6 +80,9 @@ au BufNewFile,BufRead *.php set tabstop=4 shiftwidth=4 softtabstop=4
 "set php indent
 "set twig filetype
 au BufNewFile,BufRead *.twig set filetype=html
+
+"タブの代わりに空白文字を挿入する
+set expandtab
 
 "履歴を絞り込んだ状態で遡る
 cnoremap <C-p> <Up>

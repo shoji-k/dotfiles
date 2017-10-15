@@ -24,3 +24,13 @@ nmap <silent> [denite]; :<C-u>Denite -resume -immediately -select=+1<CR>
 nmap <silent> [denite]- :<C-u>Denite -resume -immediately -select=-1<CR>
 nmap <silent> [denite]<C-d> :<C-u>call denite#start([{'name': 'file_rec', 'args': ['~/.config/dein']}])<CR>
 '''
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+if = 'has("nvim")'
+on_source = ['denite.nvim']
+
+[[plugins]]
+repo = 'Shougo/neoyank.vim'
+if = 'has("nvim")'
+on_source = ['denite.nvim']

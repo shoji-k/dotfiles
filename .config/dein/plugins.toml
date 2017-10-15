@@ -24,4 +24,34 @@ repo = 'tpope/vim-fugitive'
 [[plugins]] # filer
 repo = 'scrooloose/nerdtree'
 
-
+[[plugins]]
+repo = 'joonty/vdebug'
+hook_add = '''
+let g:vdebug_keymap = {
+\    "run" : "1",
+\    "run_to_cursor" : "<F9>",
+\    "step_over" : "2",
+\    "step_into" : "3",
+\    "step_out" : "4",
+\    "close" : "5",
+\    "detach" : "6",
+\    "set_breakpoint" : "9",
+\    "get_context" : "7",
+\    "eval_under_cursor" : "8",
+\    "eval_visual" : "<Leader>e",
+\}
+let g:vdebug_options= {
+\  "port" : 9000,
+\  "server" : '',
+\  "timeout" : 60,
+\  "on_close" : 'detach',
+\  "break_on_open" : 1,
+\  "debug_window_level" : 2,
+\  "debug_file_level" : 2,
+\  "debug_file" : "~/vdebug.log",
+\  "ide_key": "xdebug",
+\  "path_maps": {
+\    '/var/www/html': '/home/user/ws/docker/pana/src'
+\  }
+\}
+'''
