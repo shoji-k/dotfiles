@@ -92,3 +92,7 @@ colorscheme desert
 
 set statusline+=%{fugitive#statusline()}\ %<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 set clipboard+=unnamedplus
+
+" for ergodox-ez
+inoremap <C-Up> <C-[>
+
