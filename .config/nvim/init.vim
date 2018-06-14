@@ -95,4 +95,5 @@ set clipboard+=unnamedplus
 
 " for ergodox-ez
 inoremap <C-Up> <C-[>
+inoremap <C-Up> <C-✠>
 
