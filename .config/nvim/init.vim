@@ -96,6 +96,6 @@ set clipboard+=unnamedplus
 " for ergodox-ez
 noremap <C-Up> <C-[>
 noremap! <C-Up> <C-[>
-noremap <C-Up> <C-✠>
-noremap! <C-Up> <C-✠>
+noremap <C-✠> <C-[>
+noremap! <C-✠> <C-[>
 
