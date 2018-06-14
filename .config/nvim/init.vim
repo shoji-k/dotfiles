@@ -94,8 +94,7 @@ set statusline+=%{fugitive#statusline()}\ %<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&
 set clipboard+=unnamedplus
 
 " for ergodox-ez
-noremap <C-Up> <C-[>
-noremap! <C-Up> <C-[>
-noremap <C-✠> <C-[>
-noremap! <C-✠> <C-[>
-
+noremap <C-Up> <ESC>
+noremap! <C-Up> <ESC>
+noremap ✠ <ESC>
+noremap! ✠ <ESC>
