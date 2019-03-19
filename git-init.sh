@@ -12,3 +12,6 @@ git config --global core.editor vim
 git config --global push.default simple
 git config --global commit.verbose true
 git config --global init.templatedir ~/.git_template
+
+# after preparing gpg key
+git config --global user.signingkey (key)
