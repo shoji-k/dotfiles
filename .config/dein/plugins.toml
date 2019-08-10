@@ -73,3 +73,9 @@ repo = 'posva/vim-vue'
 hook_add = '''
 let g:vue_pre_processors = []
 '''
+
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
+hook_add = '''
+let g:EditorConfig_exclude_patterns = ['fugitive://.\*']
+'''
