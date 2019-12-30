@@ -1,0 +1,3 @@
+[submodule ".vim/pack/git-plugins/opt/tcomment_vim"]
+	path = .vim/pack/git-plugins/opt/tcomment_vim
+	url = git@github.com:tomtom/tcomment_vim.git
