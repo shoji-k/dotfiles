@@ -34,5 +34,10 @@ set expandtab "タブの代わりに空白文字を挿入する
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
+" for netrw
+let g:netrw_liststyle=1 " ファイルツリーの表示形式、1にするとls -laのような表示になります
+"let g:netrw_banner=0    " ヘッダを非表示にする
+let g:netrw_sizestyle="H" " サイズを(K,M,G)で表示する
+
 "set statusline+=%{fugitive#statusline()}\ %<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 "set clipboard+=unnamedplus
