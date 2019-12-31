@@ -39,5 +39,13 @@ let g:netrw_liststyle=1 " ファイルツリーの表示形式、1にするとls
 "let g:netrw_banner=0    " ヘッダを非表示にする
 let g:netrw_sizestyle="H" " サイズを(K,M,G)で表示する
 
+" for ale
+let g:ale_fixers = {
+  \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+  \   'javascript': ['prettier', 'eslint'],
+  \   'css': ['prettier'],
+  \   'ruby': ['rubocop'],
+  \}
+
 "set statusline+=%{fugitive#statusline()}\ %<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 "set clipboard+=unnamedplus
