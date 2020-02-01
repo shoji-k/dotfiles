@@ -1,5 +1,13 @@
 ## start
 
+git clone and initialize submodule
+
+```
+$ git clone git@github.com:shoji-k/dotfiles.git
+$ cd dotfiles
+$ git submodule update --init --recursive
+```
+
 for tig
 
 ```
