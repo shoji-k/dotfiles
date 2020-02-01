@@ -40,6 +40,11 @@ let g:netrw_liststyle=1 " ファイルツリーの表示形式、1にするとls
 let g:netrw_sizestyle="H" " サイズを(K,M,G)で表示する
 
 " for ale
+let g:ale_linter_aliases = {'vue': ['css', 'javascript']}
+let g:ale_linters = {
+  \ 'javascript': ['eslint'],
+  \ 'vue': ['eslint']
+  \}
 let g:ale_fixers = {
   \   '*': ['remove_trailing_lines', 'trim_whitespace'],
   \   'javascript': ['prettier', 'eslint'],
