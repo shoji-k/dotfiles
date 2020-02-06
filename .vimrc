@@ -39,6 +39,10 @@ let g:netrw_liststyle=1 " ファイルツリーの表示形式、1にするとls
 "let g:netrw_banner=0    " ヘッダを非表示にする
 let g:netrw_sizestyle="H" " サイズを(K,M,G)で表示する
 
+"for NERDTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+
 " for ale
 let g:ale_linter_aliases = {'vue': ['css', 'javascript']}
 let g:ale_linters = {
