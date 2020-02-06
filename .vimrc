@@ -55,5 +55,8 @@ let g:ale_fixers = {
 " for vim-gitgutter
 let g:gitgutter_terminal_reports_focus=0
 
+" for fzf
+set rtp+=~/.fzf
+
 "set statusline+=%{fugitive#statusline()}\ %<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 "set clipboard+=unnamedplus
