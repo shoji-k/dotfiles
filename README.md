@@ -42,3 +42,16 @@ for ale to use rubocop
 gem install rubocop
 gem install rubocop-rails
 ```
+
+for vim fzf
+
+install fzf
+[junegunn/fzf: A command\-line fuzzy finder](https://github.com/junegunn/fzf)
+
+install rg
+[BurntSushi/ripgrep: ripgrep recursively searches directories for a regex pattern](https://github.com/BurntSushi/ripgrep)
+
+```bash
+$ curl -LO https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep_11.0.2_amd64.deb
+$ sudo dpkg -i ripgrep_11.0.2_amd64.deb
+```
