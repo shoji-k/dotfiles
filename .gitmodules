@@ -10,3 +10,6 @@
 [submodule ".vim/pack/git-plugins/start/nerdtree"]
 	path = .vim/pack/git-plugins/start/nerdtree
 	url = https://github.com/preservim/nerdtree.git
+[submodule ".vim/pack/git-plugins/start/fugitive"]
+	path = .vim/pack/git-plugins/start/fugitive
+	url = https://tpope.io/vim/fugitive.git
