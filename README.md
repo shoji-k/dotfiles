@@ -8,6 +8,12 @@ $ cd dotfiles
 $ git submodule update --init --recursive
 ```
 
+for bash
+
+```
+$ ln -s here/.bashrc-bionic ~/.bashrc
+```
+
 for tig
 
 ```
