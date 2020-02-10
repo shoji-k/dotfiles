@@ -22,3 +22,12 @@
 [submodule ".vim/pack/git-plugins/start/vim-quickrun"]
 	path = .vim/pack/git-plugins/start/vim-quickrun
 	url = https://github.com/thinca/vim-quickrun
+[submodule ".vim/pack/vim-lsp/start/async.vim"]
+	path = .vim/pack/vim-lsp/start/async.vim
+	url = https://github.com/prabirshrestha/async.vim
+[submodule ".vim/pack/vim-lsp/start/vim-lsp"]
+	path = .vim/pack/vim-lsp/start/vim-lsp
+	url = https://github.com/prabirshrestha/vim-lsp
+[submodule ".vim/pack/vim-lsp/start/vim-lsp-settings"]
+	path = .vim/pack/vim-lsp/start/vim-lsp-settings
+	url = https://github.com/mattn/vim-lsp-settings
