@@ -52,6 +52,7 @@ let g:ale_linters = {
 let g:ale_fixers = {
   \   '*': ['remove_trailing_lines', 'trim_whitespace'],
   \   'javascript': ['prettier', 'eslint'],
+  \   'vue': ['prettier', 'eslint'],
   \   'css': ['prettier'],
   \   'ruby': ['rubocop'],
   \}
