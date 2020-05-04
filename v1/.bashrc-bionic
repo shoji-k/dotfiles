@@ -37,7 +37,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
+    xterm|xterm-color|*-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -57,9 +57,10 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
+    color=33m
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[02;32m\]\u@\h\[\033[00m\]:\[\033[${color}\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -115,6 +116,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+# to use default PS1, comment out below
+#[ -r /home/user/.byobu/prompt ] && . /home/user/.byobu/prompt   #byobu-prompt#
 
 # Git alias
 alias ga='git add .'
@@ -124,9 +127,8 @@ alias gd='git diff'
 alias gs='git status'
 alias gss='git status -s'
 alias gl='git log --graph --oneline --decorate --all'
-alias gH='git push origin HEAD'
 
-export LANG=ja_JP.UTF-8
+export LANG=en_US.UTF-8
 
 # useful alias
 alias ..='cd ..'
@@ -136,6 +138,7 @@ alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 alias dk='docker'
 alias dc='docker-compose'
+alias dcomposer='docker run --rm -v $(pwd):/app composer '
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -144,4 +147,8 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# for git gpg(gnupg2)
+export GPG_TTY=$(tty)
+
+export PATH="$HOME/.phpenv/bin:$PATH"
+eval "$(phpenv init -)"
