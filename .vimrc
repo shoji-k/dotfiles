@@ -45,15 +45,14 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 let NERDTreeShowHidden = 1
 
 " for ale
-let g:ale_linter_aliases = {'vue': ['css', 'javascript']}
+" let g:ale_linter_aliases = {'vue': ['css', 'javascript'], 'jsx': ['css', 'javascript'], 'tsx': ['css', 'javascript'], 'typescriptreact': ['css', 'javascript']}
+let g:ale_linter_aliases = {'vue': ['css', 'javascript'], 'typescriptreact': ['css', 'javascript']}
 let g:ale_linters = {
-  \ 'javascript': ['eslint'],
-  \ 'vue': ['eslint']
+  \ 'javascript': ['eslint']
   \}
 let g:ale_fixers = {
   \   '*': ['remove_trailing_lines', 'trim_whitespace'],
   \   'javascript': ['prettier', 'eslint'],
-  \   'vue': ['prettier', 'eslint'],
   \   'css': ['prettier'],
   \   'ruby': ['rubocop'],
   \}
