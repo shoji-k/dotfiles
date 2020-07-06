@@ -50,10 +50,26 @@ let g:gitgutter_terminal_reports_focus=0
 " for fzf
 set rtp+=~/.fzf
 
+" for ale
+autocmd bufnewfile,bufread *.tsx set filetype=typescript.tsx
+" let g:ale_linter_aliases = {'vue': ['css', 'javascript'], 'jsx': ['css', 'javascript'], 'tsx': ['css', 'javascript'], 'typescriptreact': ['css', 'javascript']}
+let g:ale_linter_aliases = {'vue': ['css', 'javascript'], 'typescriptreact': ['css', 'javascript']}
+let g:ale_linters = {
+  \ 'javascript': ['eslint'],
+  \ 'typescript': ['eslint']
+  \}
+let g:ale_fixers = {
+  \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+  \   'javascript': ['prettier', 'eslint'],
+  \   'typescript': ['prettier', 'eslint'],
+  \   'css': ['prettier'],
+  \   'ruby': ['rubocop'],
+  \}
+
 " for vim-lsp
-" let g:lsp_diagnostics_enabled = 0
-let g:lsp_diagnostics_enabled = 1
-let g:lsp_diagnostics_echo_cursor = 1
+let g:lsp_diagnostics_enabled = 0
+"let g:lsp_diagnostics_enabled = 1 "use ale
+"let g:lsp_diagnostics_echo_cursor = 1
 let g:asyncomplete_auto_popup = 1
 let g:asyncomplete_auto_completeopt = 0
 let g:asyncomplete_popup_delay = 200

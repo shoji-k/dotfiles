@@ -43,3 +43,6 @@
 [submodule ".vim/pack/git-plugins/start/vim-vsnip-integ"]
 	path = .vim/pack/git-plugins/start/vim-vsnip-integ
 	url = git@github.com:hrsh7th/vim-vsnip-integ.git
+[submodule ".vim/pack/git-plugins/start/ale"]
+	path = .vim/pack/git-plugins/start/ale
+	url = git@github.com:dense-analysis/ale.git
