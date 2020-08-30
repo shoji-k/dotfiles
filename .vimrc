@@ -74,3 +74,4 @@ let g:lsp_diagnostics_enabled = 0
 
 nnoremap <C-j> :LspDefinition<CR>
 nnoremap <C-h> :LspHover<CR>
+nnoremap <C-k> :ALEFix<CR>
