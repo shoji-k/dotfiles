@@ -8,6 +8,7 @@ $ cd dotfiles
 for git
 
 ```
+$ ln -s $(pwd)/.gitattributes ~/.gitattributes
 $ ln -s $(pwd)/.gitignore ~/.gitignore
 ```
 
