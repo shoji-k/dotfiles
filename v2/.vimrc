@@ -39,5 +39,39 @@ let g:netrw_liststyle=1 " ファイルツリーの表示形式、1にするとls
 "let g:netrw_banner=0    " ヘッダを非表示にする
 let g:netrw_sizestyle="H" " サイズを(K,M,G)で表示する
 
+"for NERDTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+let NERDTreeShowHidden = 1
+
+autocmd bufnewfile,bufread *.tsx set filetype=typescript.tsx
+" for ale
+" let g:ale_linter_aliases = {'vue': ['css', 'javascript'], 'jsx': ['css', 'javascript'], 'tsx': ['css', 'javascript'], 'typescriptreact': ['css', 'javascript']}
+let g:ale_linter_aliases = {'vue': ['css', 'javascript'], 'typescriptreact': ['css', 'javascript']}
+let g:ale_linters = {
+  \ 'javascript': ['eslint'],
+  \ 'typescript': ['eslint']
+  \}
+let g:ale_fixers = {
+  \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+  \   'javascript': ['prettier', 'eslint'],
+  \   'typescript': ['prettier', 'eslint'],
+  \   'css': ['prettier'],
+  \   'ruby': ['rubocop'],
+  \}
+
+" for vim-gitgutter
+let g:gitgutter_terminal_reports_focus=0
+
 " for fzf
 set rtp+=~/.fzf
+
+" for vim-lsp
+let g:lsp_diagnostics_enabled = 0
+
+"set statusline+=%{fugitive#statusline()}\ %<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+"set clipboard+=unnamedplus
+
+nnoremap <C-j> :LspDefinition<CR>
+nnoremap <C-h> :LspHover<CR>
+nnoremap <C-k> :ALEFix<CR>
