@@ -1,0 +1,11 @@
+README.md
+
+{{ if eq .chezmoi.os "linux" }}
+{{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+.zshrc
+{{   end }}
+{{ end }}
+
+{{ if eq .chezmoi.os "darwin" -}}
+.bashrc
+{{ end -}}
