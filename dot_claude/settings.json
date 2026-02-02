@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "idle_prompt",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/mnt/c/_tools/toast64.exe --app-id \"Claude code\" --title \"Claude Code Idle Prompt\" --message \"Your Claude Code session has been idle for a while. Need assistance?\""
+          }
+        ]
+      },
+      {
+        "matcher": "permission_prompt",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/mnt/c/_tools/toast64.exe --app-id \"Claude code\" --title \"Claude Code Permission Prompt\" --message \"Claude Code requires your permission to proceed.\""
+          }
+        ]
+      },
+      {
+        "matcher": "elicitation_dialog",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/mnt/c/_tools/toast64.exe --app-id \"Claude code\" --title \"Claude Code Elicitation Dialog\" --message \"Claude Code is requesting additional information from you.\""
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "input=$(cat); model=$(echo \"$input\" | jq -r '.model.display_name'); remaining=$(echo \"$input\" | jq -r '.context_window.remaining_percentage // empty'); [ -n \"$remaining\" ] && echo \"$model | Context: $remaining% remaining\" || echo \"$model\""
+  },
+  "enabledPlugins": {
+    "example-skills@anthropic-agent-skills": false,
+    "document-skills@anthropic-agent-skills": false,
+    "frontend-design@claude-plugins-official": false
+  },
+  "feedbackSurveyState": {
+    "lastShownTime": 1754440020501
+  }
+}
