@@ -1,0 +1,20 @@
+[user]
+	name = shoji kobayashi
+	email = shoji.kobayashi.0125@gmail.com
+[color]
+	ui = auto
+[alias]
+	ch = checkout
+	co = commit
+	st = status
+	br = branch
+[core]
+	autocrlf = false
+	quotepath = off
+	editor = vim
+[push]
+	default = simple
+[commit]
+	verbose = true
+[init]
+	defaultBranch = main
