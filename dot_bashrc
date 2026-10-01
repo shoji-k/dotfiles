@@ -143,6 +143,7 @@ alias claude='ENABLE_TOOL_SEARCH=true claude'
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+nvm use --silent default
 
 # Added by `rbenv init` on Tue Mar 11 13:34:15 JST 2025
 eval "$(~/.rbenv/bin/rbenv init - --no-rehash bash)"
